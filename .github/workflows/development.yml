@@ -82,7 +82,7 @@ jobs:
         run: |
           brew update
           brew install make cmake wget        
-          brew install --cask temurin8
+          brew install --cask temurin@8
       - name: Build for ${{ matrix.platform_name }}
         run: |
           export PATH=/opt/homebrew/bin:$PATH
