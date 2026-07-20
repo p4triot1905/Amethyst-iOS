@@ -81,7 +81,7 @@ jobs:
       - name: Install build tools
         run: |
           brew update
-          brew install make cmake wget        
+          brew install make cmake wget ldid      
           brew install --cask temurin@8
       - name: Build for ${{ matrix.platform_name }}
         run: |
