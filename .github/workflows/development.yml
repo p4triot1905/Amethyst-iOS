@@ -19,7 +19,7 @@ jobs:
           - platform: 2
             platform_name: ios
     
-    runs-on: macos-latest
+    runs-on: J316sAP
     steps:
       - name: Remove work folders
         run: |
@@ -78,8 +78,6 @@ jobs:
           git add Natives/resources/Frameworks/libgl4es_114.dylib
           git commit -am "CI: Update gl4es"
           git push
-      - name: Install GNU Make
-        run: brew install make
       - name: Build for ${{ matrix.platform_name }}
         run: |
           export PATH=/opt/homebrew/bin:$PATH
