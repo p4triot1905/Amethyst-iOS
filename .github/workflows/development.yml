@@ -78,6 +78,10 @@ jobs:
           git add Natives/resources/Frameworks/libgl4es_114.dylib
           git commit -am "CI: Update gl4es"
           git push
+      - name: Install build tools
+        run: |
+          brew update
+          brew install make cmake wget          
       - name: Build for ${{ matrix.platform_name }}
         run: |
           export PATH=/opt/homebrew/bin:$PATH
